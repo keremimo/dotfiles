@@ -40,7 +40,7 @@
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
-(setq org-directory "~/org/")
+(setq org-directory "~/notes/org/")
 
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
@@ -78,7 +78,7 @@
       company-minimum-prefix-length 1)
 (setq +format-on-save-enabled-modes t)
 (setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 24))
-(setq org-agenda-files '("~/org/"))
+(setq org-agenda-files '("~/notes/org/"))
 (map! :n "C-q" #'kill-current-buffer
       :i "C-q" #'kill-current-buffer)
 
