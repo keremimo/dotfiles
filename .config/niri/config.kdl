@@ -4,6 +4,9 @@ input {
         repeat-delay 220
         repeat-rate 40
         track-layout "global"
+        xkb {
+            options "ctrl:nocaps"
+        }
     }
     touchpad {
         tap
