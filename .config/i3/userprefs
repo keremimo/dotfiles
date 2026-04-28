@@ -1,0 +1,15 @@
+set $mod super_l
+
+input * repeat_delay 250
+input * repeat_rate 35
+
+bar {
+	status_command waybar
+}
+
+output HDMI-A-1 mode 1920x1080 pos -1920 0
+output DP-3 mode 1920x1080 pos 0 -1080
+
+bindsym $mod+f fullscreen toggle
+bindsym $mod+Shift+r restart
+bindsym $mod+Return kitty

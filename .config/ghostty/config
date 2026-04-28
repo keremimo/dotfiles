@@ -1,0 +1,23 @@
+font-family = "IosevkaTerm Nerd Font"
+font-size = 14
+
+window-inherit-font-size = false
+window-decoration = false
+font-thicken = true
+keybind = ctrl+shift+comma=reload_config
+
+theme = noctalia
+mouse-hide-while-typing = true
+background-opacity = 0.97
+background-blur = true
+
+window-vsync = false
+window-width = 150
+window-height = 40
+
+keybind = ctrl+c=ignore
+keybind = ctrl+shift+c=text:\x03
+keybind = ctrl+c=copy_to_clipboard
+keybind = ctrl+v=paste_from_clipboard
+
+unfocused-split-opacity = 1

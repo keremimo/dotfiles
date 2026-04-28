@@ -1,0 +1,111 @@
+spawn-at-startup "/usr/lib/pam_kwallet_init"
+input {
+    keyboard {
+        repeat-delay 220
+        repeat-rate 40
+        track-layout "global"
+    }
+    touchpad {
+        tap
+        natural-scroll
+        accel-speed 0.000000
+        accel-profile "flat"
+        scroll-factor 0.500000
+    }
+    mouse {
+        accel-speed 0.000000
+        accel-profile "flat"
+        scroll-button 274
+        scroll-method "on-button-down"
+        scroll-factor 0.500000
+    }
+    trackpoint { accel-speed 0.000000; }
+    trackball { accel-speed 0.000000; }
+    tablet
+    touch
+    focus-follows-mouse
+}
+screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+prefer-no-csd
+layout {
+    gaps 4
+    struts {
+        left 8
+        right 8
+        top 0
+        bottom 52
+    }
+    focus-ring { off; }
+    border { off; }
+    insert-hint { color "rgba(127 200 255 50%)"; }
+    default-column-width
+    center-focused-column "never"
+    always-center-single-column
+}
+cursor {
+    xcursor-theme "Banana"
+    xcursor-size 28
+}
+output "Microstep MPG321UX OLED 0x01010101" {
+    transform "normal"
+    position x=0 y=0
+    mode "3840x2160"
+    scale 1.5
+}
+hotkey-overlay
+environment
+binds {
+    Ctrl+Print { spawn "sh" "-c" "grim -g \"$(slurp)\" - | magick png:- -colorspace Gray -depth 8 -resample 400x400 tif:- | tesseract --oem 2 --psm 6 -l eng - - | wl-copy"; }
+    Print { spawn "sh" "-c" "grim -g \"$(slurp)\" - | wl-copy"; }
+    Super+1 { focus-workspace 1; }
+    Super+2 { focus-workspace 2; }
+    Super+3 { focus-workspace 3; }
+    Super+4 { focus-workspace 4; }
+    Super+B { spawn "firefox"; }
+    Super+C { center-column; }
+    Super+E { expel-window-from-column; }
+    Super+Equal { set-column-width "+5%"; }
+    Super+H { focus-column-left; }
+    Super+J { focus-workspace-down; }
+    Super+K { focus-workspace-up; }
+    Super+L { focus-column-right; }
+    Super+Left { focus-column-or-monitor-left; }
+    Super+Minus { set-column-width "-5%"; }
+    Super+Right { focus-column-or-monitor-right; }
+    Super+Shift+Left { move-column-left; }
+    Super+Shift+Right { move-column-right; }
+    Super+Shift+q { quit skip-confirmation=true; }
+    Super+Space repeat=false { spawn "vicinae" "toggle"; }
+    Super+T { spawn "ghostty"; }
+    Super+W { consume-window-into-column; }
+    Super+f { fullscreen-window; }
+    Super+q { close-window; }
+    XF86AudioLowerVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
+    XF86AudioRaiseVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
+    XF86MonBrightnessDown { spawn "brightnessctl" "set" "5%-"; }
+    XF86MonBrightnessUp { spawn "brightnessctl" "set" "+5%"; }
+}
+spawn-at-startup "qs" "-c" "noctalia-shell"
+spawn-at-startup "vicinae" "server"
+
+window-rule {
+    match app-id="^.*$"
+    draw-border-with-background false
+    geometry-corner-radius 12.000000 12.000000 12.000000 12.000000
+    clip-to-geometry true
+}
+animations { slowdown 1.000000; }
+
+debug {
+	honor-xdg-activation-with-invalid-serial
+}
+
+window-rule {
+    match app-id="ghostty$"
+
+    background-effect {
+        blur true
+    }
+}
+
+include "./noctalia.kdl"
