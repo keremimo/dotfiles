@@ -8,7 +8,7 @@ keybind = ctrl+shift+comma=reload_config
 
 theme = noctalia
 mouse-hide-while-typing = true
-background-opacity = 0.97
+background-opacity = 0.90
 background-blur = true
 
 window-vsync = false
