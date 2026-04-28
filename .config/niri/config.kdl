@@ -33,7 +33,7 @@ layout {
         left 8
         right 8
         top 0
-        bottom 52
+        bottom 0
     }
     focus-ring { off; }
     border { off; }
