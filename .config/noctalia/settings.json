@@ -366,7 +366,7 @@
         "deadOpacity": 1,
         "displayMode": "always_visible",
         "dockType": "floating",
-        "enabled": true,
+        "enabled": false,
         "floatingRatio": 0,
         "groupApps": true,
         "groupClickAction": "cycle",
