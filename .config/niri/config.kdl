@@ -10,7 +10,7 @@ input {
         natural-scroll
         accel-speed 0.000000
         accel-profile "flat"
-        scroll-factor 0.500000
+        scroll-factor 0.300000
     }
     mouse {
         accel-speed 0.000000
@@ -38,7 +38,7 @@ layout {
     focus-ring { off; }
     border { off; }
     insert-hint { color "rgba(127 200 255 50%)"; }
-    default-column-width
+    default-column-width { proportion 0.7; }
     center-focused-column "never"
     always-center-single-column
 }
@@ -52,10 +52,18 @@ output "Microstep MPG321UX OLED 0x01010101" {
     mode "3840x2160"
     scale 1.5
 }
-hotkey-overlay
+output "BOE 0x0C8B 0x00000068" {
+    transform "normal"
+    position x=0 y=0
+    mode "2560x1600"
+    scale 1.25
+}
+hotkey-overlay {
+    skip-at-startup
+}
 environment
 binds {
-    Ctrl+Print { spawn "sh" "-c" "grim -g \"$(slurp)\" - | magick png:- -colorspace Gray -depth 8 -resample 400x400 tif:- | tesseract --oem 2 --psm 6 -l eng - - | wl-copy"; }
+    Super+Shift+4 { spawn "sh" "-c" "grim -g \"$(slurp)\" - | magick png:- -colorspace Gray -depth 8 -resample 400x400 tif:- | tesseract --oem 2 --psm 6 -l eng - - | wl-copy"; }
     Print { spawn "sh" "-c" "grim -g \"$(slurp)\" - | wl-copy"; }
     Super+1 { focus-workspace 1; }
     Super+2 { focus-workspace 2; }
@@ -91,7 +99,7 @@ spawn-at-startup "vicinae" "server"
 window-rule {
     match app-id="^.*$"
     draw-border-with-background false
-    geometry-corner-radius 12.000000 12.000000 12.000000 12.000000
+    geometry-corner-radius 8.000000 8.000000 8.000000 8.000000
     clip-to-geometry true
 }
 animations { slowdown 1.000000; }
@@ -102,7 +110,6 @@ debug {
 
 window-rule {
     match app-id="ghostty$"
-
     background-effect {
         blur true
     }

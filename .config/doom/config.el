@@ -77,10 +77,7 @@
 (setq company-idle-delay 0.1
       company-minimum-prefix-length 1)
 (setq +format-on-save-enabled-modes t)
-(setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 18))
-(setq default-frame-alist
-      '((width . 160)   ;; columns
-        (height . 80))) ;; rows
+(setq doom-font (font-spec :family "IosevkaTerm Nerd Font" :size 24))
 (setq org-agenda-files '("~/org/"))
 (map! :n "C-q" #'kill-current-buffer
       :i "C-q" #'kill-current-buffer)
