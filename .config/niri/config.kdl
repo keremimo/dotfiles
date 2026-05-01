@@ -49,18 +49,6 @@ cursor {
     xcursor-theme "Banana"
     xcursor-size 28
 }
-output "Microstep MPG321UX OLED 0x01010101" {
-    transform "normal"
-    position x=0 y=0
-    mode "3840x2160"
-    scale 1.5
-}
-output "BOE 0x0C8B 0x00000068" {
-    transform "normal"
-    position x=0 y=0
-    mode "2560x1600"
-    scale 1.25
-}
 hotkey-overlay {
     skip-at-startup
 }
@@ -119,3 +107,6 @@ window-rule {
 }
 
 include "./noctalia.kdl"
+
+// Monique monitor configuration
+include "monitors.kdl"

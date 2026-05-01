@@ -122,6 +122,13 @@
                     "showText": true,
                     "textColor": "none",
                     "useFixedWidth": true
+                },
+                {
+                    "defaultSettings": {
+                        "hideBackground": false,
+                        "minimumThreshold": 10
+                    },
+                    "id": "plugin:catwalk"
                 }
             ],
             "left": [
@@ -248,6 +255,14 @@
                     "icon": "noctalia",
                     "id": "ControlCenter",
                     "useDistroLogo": false
+                },
+                {
+                    "defaultSettings": {
+                        "activeColor": "primary",
+                        "refreshInterval": 5000,
+                        "showProfileLabel": false
+                    },
+                    "id": "plugin:monique"
                 }
             ]
         }
