@@ -68,11 +68,15 @@ binds {
     Super+J { focus-workspace-down; }
     Super+K { focus-workspace-up; }
     Super+L { focus-column-right; }
+    Super+Down { focus-workspace-down; }
     Super+Left { focus-column-or-monitor-left; }
     Super+Minus { set-column-width "-5%"; }
     Super+Right { focus-column-or-monitor-right; }
+    Super+Up { focus-workspace-up; }
+    Super+Shift+Down { move-window-to-workspace-down; }
     Super+Shift+Left { move-column-left; }
     Super+Shift+Right { move-column-right; }
+    Super+Shift+Up { move-window-to-workspace-up; }
     Super+Shift+q { quit skip-confirmation=true; }
     Super+S { toggle-window-floating; }
     Super+Space repeat=false { spawn "vicinae" "toggle"; }
