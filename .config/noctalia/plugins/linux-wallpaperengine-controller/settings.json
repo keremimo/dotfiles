@@ -1,34 +1,34 @@
 {
   "wallpapersFolder": "~/.local/share/Steam/steamapps/workshop/content/431960",
-  "assetsDir": "~/.local/share/Steam/steamapps/common/wallpaper_engine/assets",
+  "assetsDir": "",
   "iconColor": "none",
   "enableExtraPropertiesEditor": true,
   "defaultScaling": "fill",
-  "defaultClamp": "clamp",
-  "defaultFps": 60,
+  "defaultClamp": "border",
+  "defaultFps": 15,
   "defaultVolume": 100,
   "defaultMuted": true,
   "defaultAudioReactiveEffects": false,
   "defaultNoAutomute": false,
-  "defaultDisableMouse": false,
+  "defaultDisableMouse": true,
   "defaultDisableParallax": true,
   "applyWallpaperColorsOnApply": true,
   "wallpaperColorScreenshots": {
-    "DP-1": {
-      "path": "/home/kerem/.cache/noctalia/plugins/linux-wallpaperengine-controller/DP-1-2235545327-theme-shot.png",
-      "wallpaperPath": "/home/kerem/.local/share/Steam/steamapps/workshop/content/431960/2235545327",
+    "eDP-1": {
+      "path": "/home/kerem/.cache/noctalia/plugins/linux-wallpaperengine-controller/eDP-1-2147092453-theme-shot.png",
+      "wallpaperPath": "/home/kerem/.local/share/Steam/steamapps/workshop/content/431960/2147092453",
       "scaling": "fill",
-      "updatedAt": 1777717630525
+      "updatedAt": 1777729153301
     }
   },
   "defaultNoFullscreenPause": false,
-  "defaultFullscreenPauseOnlyActive": false,
+  "defaultFullscreenPauseOnlyActive": true,
   "autoApplyOnStartup": true,
   "wallpaperScanCacheMinutes": 5,
   "panelLastSelectedPath": "",
   "screens": {
-    "DP-1": {
-      "path": "/home/kerem/.local/share/Steam/steamapps/workshop/content/431960/2235545327",
+    "eDP-1": {
+      "path": "/home/kerem/.local/share/Steam/steamapps/workshop/content/431960/2147092453",
       "scaling": "fill"
     }
   },
@@ -39,209 +39,55 @@
     "1250971693": {
       "schemecolor": "0,0,0"
     },
-    "1457581889": {
-      "schemecolor": "81,46,31"
-    },
-    "1877322497": {
-      "bgm_volume": "1",
-      "name": "YOURNAME",
-      "schemecolor": "1,1,1"
-    },
-    "1884904087": {
-      "leaves_": "1",
-      "name": "YOURNAME",
-      "new_property": "1",
-      "schemecolor": "140,180,199",
-      "time_": "1"
-    },
-    "1904399740": {
-      "schemecolor": "19,50,88"
-    },
     "2147092453": {
       "audio_responsive_clouds": "1",
       "schemecolor": "0,0,0",
       "static_flashing_clouds_better_to_disable_audio_reactive_": "0"
     },
-    "2235545327": {
-      "newproperty": "1,0,0",
-      "schemecolor": "66,66,66"
+    "2628380382": {
+      "schemecolor": "71,54,134"
     },
-    "2240586573": {
-      "cameraonoff": "1",
-      "schemecolor": "113,94,76"
+    "3441873795": {
+      "blippers": "1",
+      "cloudshadows": "1",
+      "cursorripple": "1",
+      "datetime": "1",
+      "datetime24hrformat": "0",
+      "datetimecolor": "1,1,1",
+      "datetimeisdraggable": "1",
+      "datetimescale": "1",
+      "dustmotes": "0",
+      "fish": "1",
+      "kirbyblinking": "1",
+      "lightshaft": "0",
+      "mediaintegration": "0",
+      "mediaintegrationisdraggable": "1",
+      "mediaintegrationopacity": "0.5",
+      "mediaintegrationscale": "0.5",
+      "music": "2",
+      "musicnote": "0",
+      "musicvolume": "0.6",
+      "schemecolor": "57,137,151",
+      "waterambiencevolume": "0.4",
+      "watercaustics": "1",
+      "watercausticsgranularity": "1.5"
     },
-    "2290585492": {
-      "schemecolor": "0,0,0"
+    "3471004940": {
+      "clock": "0",
+      "darkersky": "1",
+      "schemecolor": "17,51,162",
+      "startrail": "2",
+      "visualizer": "0",
+      "wind": "1"
     },
-    "2407172811": {
-      "_24hclock": "1",
-      "audiobarcolor": "126,69,166",
-      "audiobaropacity": "0.63",
-      "audiobars": "0",
-      "clock": "1",
-      "clockcolor": "1,1,1",
-      "clockopacity": "0.9",
-      "clocksize": "32",
-      "customtext": "Gaming Life",
-      "customtextcolor": "140,0,0",
-      "customtextscrollspeed": "-0.2",
-      "customtextsize": "32",
-      "schemecolor": "8,37,57",
-      "scrolltext": "1"
-    },
-    "2645811370": {
-      "schemecolor": "224,60,51"
-    },
-    "2684200395": {
-      "schemecolor": "93,116,138"
-    },
-    "2787873159": {
-      "schemecolor": "144,221,139"
-    },
-    "2864527205": {
-      "newproperty": "1",
-      "schemecolor": "212,176,147"
-    },
-    "2873951840": {
-      "bloom": "0",
-      "bloomstrength": "1.49",
-      "bloomthreshold": "0.87",
-      "schemecolor": "66,38,52"
-    },
-    "2913692385": {
-      "schemecolor": "176,91,73"
-    },
-    "3510729512": {
-      "_01": "0",
-      "_2": "（可自定义文字）",
-      "_21": "255,255,255",
-      "_22": "43.817001",
-      "_24": "1",
-      "b": "",
-      "b1": "6",
-      "bbyy": "0",
-      "bgm": "吉俣良 - Letter From Heaven（不支持自定义）",
-      "bigbahrefhttpswwwpixivnetusers14881241centerdeyuibr": "",
-      "bigbbrahrefhttpssteamcommunitycomlinkfilterurlhttpspanquarkcns559c382d2a1elistshare": "0",
-      "brahrefhttpswwwbilibilicomvideobv11t42157njspm_id_from33399900vd_source6f828cdc8aaedab90f6dc4faa46274eebv11t42157njabigp": "",
-      "centerbigbbrahrefhttpswwwpixivnetusers14881241deyuiabigp": "",
-      "day": "5",
-      "day1": "2",
-      "hrb": "1",
-      "hrbigb": "1",
-      "hrbigbbrdisplaymediainformation": "0",
-      "hrbigbgeneralcomponentswitch": "1",
-      "imgsrchttpmqpiccnpscv54uqdlk3nauxa4j47wn15wvmc4bjxtjtmeugtj9ek67v8ajmqrekdtr0s5pnqaxucocfhhjuezkloqxuqp0jsbumhwzb1hnbawn4iulfdmgz9s2fcnnduwclxxyzke6dmp4vwv5mmnullboaqf3aaebdwadbyirfphotolistt5width200height100brbigbbrbigbthankyou": "",
-      "newproperty": "255,255,255",
-      "newproperty13": "",
-      "newproperty16": "152,227,167",
-      "newproperty17": "5",
-      "newproperty23": "0.308",
-      "newproperty25": "3.125",
-      "newproperty26": "0.948",
-      "newproperty30": "1",
-      "newproperty31": "",
-      "newproperty32": "202.261993",
-      "newproperty33": "140",
-      "newproperty34": "255,255,255",
-      "newproperty35": "255,255,255",
-      "newproperty45": "1",
-      "newproperty46": "1",
-      "newproperty50": "1",
-      "newproperty51": "255,255,255",
-      "newproperty52": "1",
-      "newproperty53": "34.798",
-      "newproperty54": "0",
-      "newproperty55": "Bilibili/抖音 夜莺Night",
-      "newproperty57": "6",
-      "newproperty59": "0",
-      "newproperty7": "255,255,255",
-      "newproperty8": "0",
-      "night": "",
-      "nightmpkgnightxxxbrbrfirstofallthankyouverymuchforlikingmywallpaperhowevermakingwallpaperisnoteasysoiherebydeclarethatmywallpaperisstrictlyprohibitedfrombeingusedforcommercialpurposesorreproducedonotherplatformswithoutpermissionifyouareawallpaperrecommendationbloggerorwanttorepostwallpapersforpromotionpleasemakesuretoprominentlyindicatetheauthorortagmenightingalenightatthesametimeifyouwanttosharemywallpaperwithothersthroughonlinestorageorotherchannelspleasepayattentiontothenamingformataddtheauthorprefixnametothenamesuchasunifyingthempkgnamingformatasauthorwallpapernameforexamplenightingalenightxxxifpossibleicancreateaseparateauthorsectionthisismybottomlineialsohopetoseefansandfriendswhocanhelpremindandsupervise": "",
-      "schemecolor": "116,165,114",
-      "shu": "1",
-      "time": "1",
-      "week1": "2",
-      "weekdisplay": "255,255,255",
-      "weekdisplaysize": "96.653",
-      "x": "-0.182",
-      "x1": "-0.29",
-      "x2": "0.074",
-      "x3": "0",
-      "x5": "0.376",
-      "x6": "0.225",
-      "x7": "0.333",
-      "x8": "0.692",
-      "y": "-0.144",
-      "y1": "0",
-      "y2": "-0.376",
-      "y3": "0.483",
-      "y5": "0.672",
-      "y6": "0.402",
-      "y7": "0.69",
-      "y8": "-0.161"
-    },
-    "3585875739": {
-      "bloom": "1",
-      "eyeglass": "0",
-      "eyesparks": "1",
-      "hue": "0",
-      "osc": "1",
-      "schemecolor": "0,0,0"
-    },
-    "3613206617": {
-      "schemecolor": "8,7,75"
-    },
-    "3616389236": {},
-    "3618509271": {
-      "_24hrformat": "1",
-      "allelements": "1",
-      "allxcoordinate": "0.5",
-      "allxsize": "1.02",
-      "allysize": "1.02",
-      "body": "1",
-      "clock": "1",
-      "clockxcoordinate": "0",
-      "clockxsize": "0.44",
-      "clockycoordinate": "-0.03",
-      "clockysize": "0.44",
-      "date": "1",
-      "datexcoordinate": "0",
-      "datexsize": "0.4",
-      "dateycoordinate": "0",
-      "dateysize": "0.38",
-      "day": "1",
-      "dayxcoordinate": "0",
-      "dayxsize": "0.75",
-      "dayysize": "1",
-      "eyeblink": "1",
-      "goldenratio": "1",
-      "hairandclothes": "1",
-      "handshadow": "1",
-      "musicbar": "1",
-      "newproperty": "0.8",
-      "newproperty2": "0.04",
-      "schemecolor": "193,0,0",
-      "shadow": "0",
-      "theme": "0",
-      "themecolor": "193,0,0"
-    },
-    "3622495963": {
-      "newproperty": "0",
-      "newproperty1": "0",
-      "newproperty2": "0",
-      "newproperty3": "0",
-      "newproperty4": "0",
-      "newproperty5": "0",
-      "schemecolor": "0,0,0"
-    }
+    "3597772384": {}
   },
   "lastKnownGoodScreens": {
-    "DP-1": {
-      "path": "/home/kerem/.local/share/Steam/steamapps/workshop/content/431960/2235545327",
+    "eDP-1": {
+      "path": "/home/kerem/.local/share/Steam/steamapps/workshop/content/431960/2147092453",
       "scaling": "fill"
     }
   },
-  "runtimeRecoveryPending": false
+  "runtimeRecoveryPending": false,
+  "defaultDisableParticles": false
 }

@@ -214,6 +214,7 @@ Item {
   readonly property bool defaultNoAutomute: cfg.defaultNoAutomute ?? defaults.defaultNoAutomute ?? false
   readonly property bool defaultDisableMouse: cfg.defaultDisableMouse ?? defaults.defaultDisableMouse ?? false
   readonly property bool defaultDisableParallax: cfg.defaultDisableParallax ?? defaults.defaultDisableParallax ?? false
+  readonly property bool defaultDisableParticles: cfg.defaultDisableParticles ?? defaults.defaultDisableParticles ?? false
   readonly property bool defaultNoFullscreenPause: cfg.defaultNoFullscreenPause ?? defaults.defaultNoFullscreenPause ?? false
   readonly property bool defaultFullscreenPauseOnlyActive: cfg.defaultFullscreenPauseOnlyActive ?? defaults.defaultFullscreenPauseOnlyActive ?? false
   readonly property bool defaultAutoApply: cfg.autoApplyOnStartup ?? defaults.autoApplyOnStartup ?? true
@@ -849,7 +850,8 @@ Item {
       audioReactiveEffects: defaultAudioReactiveEffects,
       noAutomute: defaultNoAutomute,
       disableMouse: defaultDisableMouse,
-      disableParallax: defaultDisableParallax
+      disableParallax: defaultDisableParallax,
+      disableParticles: defaultDisableParticles
     };
 
     command.push("--fps");
@@ -882,6 +884,10 @@ Item {
 
     if (runtimeOptions.disableParallax) {
       command.push("--disable-parallax");
+    }
+
+    if (runtimeOptions.disableParticles) {
+      command.push("--disable-particles");
     }
 
     if (defaultNoFullscreenPause) {
@@ -1378,6 +1384,64 @@ Item {
 
     function reload() {
       root.reload();
+    }
+
+    function setFps(value: string) {
+      const nextFps = Math.max(0, Math.min(240, Math.floor(Number(value))));
+      if (isNaN(nextFps) || !root.pluginApi) {
+        Logger.w("LWEController", "IPC setFps ignored due to invalid value", value);
+        return;
+      }
+
+      root.pluginApi.pluginSettings.defaultFps = nextFps;
+      root.pluginApi.saveSettings();
+      Logger.i("LWEController", "IPC setFps", nextFps);
+    }
+
+    function setStaticWallpaperEnabled(value: string) {
+      const normalized = String(value || "").trim().toLowerCase();
+      const enabled = normalized === "true" || normalized === "1" || normalized === "yes" || normalized === "on";
+      Settings.data.wallpaper.enabled = enabled;
+      Logger.i("LWEController", "IPC setStaticWallpaperEnabled", enabled);
+    }
+
+    function setPowerProfile(profile: string) {
+      const mode = String(profile || "").trim().toLowerCase();
+      if (!root.pluginApi) {
+        return;
+      }
+
+      if (mode === "power-saver") {
+        root.pluginApi.pluginSettings.defaultFps = 1;
+        root.pluginApi.pluginSettings.defaultMuted = true;
+        root.pluginApi.pluginSettings.defaultAudioReactiveEffects = false;
+        root.pluginApi.pluginSettings.defaultNoAutomute = false;
+        root.pluginApi.pluginSettings.defaultDisableMouse = true;
+        root.pluginApi.pluginSettings.defaultDisableParallax = true;
+        root.pluginApi.pluginSettings.defaultDisableParticles = true;
+      } else if (mode === "balanced") {
+        root.pluginApi.pluginSettings.defaultFps = 15;
+        root.pluginApi.pluginSettings.defaultMuted = true;
+        root.pluginApi.pluginSettings.defaultAudioReactiveEffects = false;
+        root.pluginApi.pluginSettings.defaultNoAutomute = false;
+        root.pluginApi.pluginSettings.defaultDisableMouse = true;
+        root.pluginApi.pluginSettings.defaultDisableParallax = true;
+        root.pluginApi.pluginSettings.defaultDisableParticles = false;
+      } else if (mode === "performance") {
+        root.pluginApi.pluginSettings.defaultFps = 60;
+        root.pluginApi.pluginSettings.defaultMuted = true;
+        root.pluginApi.pluginSettings.defaultAudioReactiveEffects = false;
+        root.pluginApi.pluginSettings.defaultNoAutomute = false;
+        root.pluginApi.pluginSettings.defaultDisableMouse = true;
+        root.pluginApi.pluginSettings.defaultDisableParallax = true;
+        root.pluginApi.pluginSettings.defaultDisableParticles = false;
+      } else {
+        Logger.w("LWEController", "IPC setPowerProfile ignored due to invalid profile", profile);
+        return;
+      }
+
+      root.pluginApi.saveSettings();
+      Logger.i("LWEController", "IPC setPowerProfile", mode);
     }
 
     function refreshWallpapers() {

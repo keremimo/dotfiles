@@ -768,7 +768,7 @@
         "automationEnabled": false,
         "directory": "/home/kerem/Wallpapers",
         "enableMultiMonitorDirectories": false,
-        "enabled": false,
+        "enabled": true,
         "favorites": [
         ],
         "fillColor": "#000000",
