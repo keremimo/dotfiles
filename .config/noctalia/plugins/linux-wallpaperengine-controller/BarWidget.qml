@@ -23,7 +23,7 @@ NIconButton {
   readonly property color resolvedIconColor: Color.resolveColorKey(iconColorKey)
   readonly property bool hasCustomIconColor: iconColorKey !== "none"
 
-  icon: "wallpaper-selector"
+  icon: Settings.data.wallpaper.enabled ? "photo" : "wallpaper-selector"
   tooltipDirection: BarService.getTooltipDirection(screen?.name)
   baseSize: Style.getCapsuleHeightForScreen(screen?.name)
   applyUiScale: false
@@ -49,19 +49,26 @@ NIconButton {
     if (mainInstance?.isApplying) {
       return pluginApi?.tr("widget.tooltip.running");
     }
-    return pluginApi?.tr("widget.tooltip.ready");
+    return Settings.data.wallpaper.enabled ? "Static wallpaper active" : "Wallpaper Engine active";
   }
 
   onClicked: {
-    if (pluginApi) {
-      pluginApi.togglePanel(root.screen, this);
-    }
+    pluginApi?.togglePanel(root.screen, this);
+  }
+
+  onMiddleClicked: {
+    mainInstance?.toggleWallpaperMode(true);
   }
 
   NPopupContextMenu {
     id: contextMenu
 
     model: [
+      {
+        "label": "Open wallpaper selector",
+        "action": "openPanel",
+        "icon": "wallpaper-selector"
+      },
       {
         "label": pluginApi?.tr("menu.refreshWallpapers"),
         "action": "refreshWallpapers",
@@ -71,6 +78,11 @@ NIconButton {
         "label": mainInstance?.engineRunning ? pluginApi?.tr("menu.stop") : pluginApi?.tr("menu.start"),
         "action": mainInstance?.engineRunning ? "stop" : "start",
         "icon": mainInstance?.engineRunning ? "player-stop" : "player-play"
+      },
+      {
+        "label": Settings.data.wallpaper.enabled ? "Use Wallpaper Engine" : "Use static wallpaper",
+        "action": "toggleWallpaperMode",
+        "icon": Settings.data.wallpaper.enabled ? "player-play" : "photo"
       },
       {
         "label": pluginApi?.tr("menu.settings"),
@@ -83,12 +95,16 @@ NIconButton {
       contextMenu.close();
       PanelService.closeContextMenu(screen);
 
-      if (action === "refreshWallpapers") {
+      if (action === "openPanel") {
+        pluginApi?.togglePanel(root.screen, root);
+      } else if (action === "refreshWallpapers") {
         mainInstance?.refreshWallpaperCache(true, true);
       } else if (action === "stop") {
         mainInstance?.stopAll(true);
       } else if (action === "start") {
         mainInstance?.reload(true);
+      } else if (action === "toggleWallpaperMode") {
+        mainInstance?.toggleWallpaperMode(true);
       } else if (action === "settings") {
         BarService.openPluginSettings(root.screen, pluginApi.manifest);
       }

@@ -5,7 +5,7 @@
   "enableExtraPropertiesEditor": true,
   "defaultScaling": "fill",
   "defaultClamp": "border",
-  "defaultFps": 15,
+  "defaultFps": 60,
   "defaultVolume": 100,
   "defaultMuted": true,
   "defaultAudioReactiveEffects": false,

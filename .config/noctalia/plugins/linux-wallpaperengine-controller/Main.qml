@@ -29,6 +29,7 @@ Item {
   property bool wallpapersFolderAccessible: true
   property var cachedWallpaperItems: []
   property double lastWallpaperScanAt: 0
+  readonly property string staticFallbackWallpaper: "/home/kerem/Wallpapers/japan-background-digital-art.jpg"
   property var pendingWallpaperColorRequest: null
   property string pendingCachedWallpaperColorPath: ""
   property string pendingCachedWallpaperColorScreenName: ""
@@ -1043,6 +1044,31 @@ Item {
     }
   }
 
+  function switchToStaticWallpaper(showToast = false) {
+    stopAll(false);
+    Settings.data.wallpaper.enabled = true;
+    staticWallpaperProcess.running = true;
+    if (showToast) {
+      ToastService.showNotice(pluginApi?.tr("panel.title"), "Using static wallpaper", "photo");
+    }
+  }
+
+  function switchToWallpaperEngine(showToast = false) {
+    Settings.data.wallpaper.enabled = false;
+    reload(false);
+    if (showToast) {
+      ToastService.showNotice(pluginApi?.tr("panel.title"), "Using Wallpaper Engine", "player-play");
+    }
+  }
+
+  function toggleWallpaperMode(showToast = false) {
+    if (Settings.data.wallpaper.enabled) {
+      switchToWallpaperEngine(showToast);
+      return;
+    }
+    switchToStaticWallpaper(showToast);
+  }
+
   // External command and IPC integration.
   Process {
     id: wallpaperScanProcess
@@ -1223,6 +1249,25 @@ Item {
   }
 
   Process {
+    id: staticWallpaperProcess
+    running: false
+    command: [
+      "bash",
+      "-c",
+      "if [ -f \"$1\" ]; then qs -c noctalia-shell ipc call wallpaper set \"$1\" all; else qs -c noctalia-shell ipc call wallpaper random all; fi",
+      "wallpaperengine-static-fallback",
+      root.staticFallbackWallpaper
+    ]
+
+    onExited: function (exitCode) {
+      Logger.d("LWEController", "Static wallpaper command finished", "exitCode=", exitCode);
+    }
+
+    stdout: StdioCollector {}
+    stderr: StdioCollector {}
+  }
+
+  Process {
     id: wallpaperColorProcess
     running: false
 
@@ -1384,6 +1429,18 @@ Item {
 
     function reload() {
       root.reload();
+    }
+
+    function toggleWallpaperMode() {
+      root.toggleWallpaperMode();
+    }
+
+    function staticWallpaperMode() {
+      root.switchToStaticWallpaper();
+    }
+
+    function wallpaperEngineMode() {
+      root.switchToWallpaperEngine();
     }
 
     function setFps(value: string) {
