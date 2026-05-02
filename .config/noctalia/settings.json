@@ -169,7 +169,9 @@
                     "textColor": "none",
                     "useFixedWidth": false,
                     "visualizerType": "linear"
-                },
+                }
+            ],
+            "right": [
                 {
                     "defaultSettings": {
                         "activeColor": "primary",
@@ -182,9 +184,7 @@
                         "removeMargins": false
                     },
                     "id": "plugin:privacy-indicator"
-                }
-            ],
-            "right": [
+                },
                 {
                     "defaultSettings": {
                         "hideBackground": false,

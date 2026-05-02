@@ -74,6 +74,7 @@ binds {
     Super+Shift+Left { move-column-left; }
     Super+Shift+Right { move-column-right; }
     Super+Shift+q { quit skip-confirmation=true; }
+    Super+S { toggle-window-floating; }
     Super+Space repeat=false { spawn "vicinae" "toggle"; }
     Super+T { spawn "ghostty"; }
     Super+W { consume-window-into-column; }
