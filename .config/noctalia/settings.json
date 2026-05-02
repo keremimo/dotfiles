@@ -144,17 +144,6 @@
                     "unfocusedIconsOpacity": 1
                 },
                 {
-                    "colorizeIcons": false,
-                    "hideMode": "transparent",
-                    "id": "ActiveWindow",
-                    "maxWidth": 250,
-                    "scrollingMode": "always",
-                    "showIcon": true,
-                    "showText": true,
-                    "textColor": "none",
-                    "useFixedWidth": true
-                },
-                {
                     "compactMode": false,
                     "hideMode": "hidden",
                     "hideWhenIdle": false,
@@ -169,6 +158,17 @@
                     "textColor": "none",
                     "useFixedWidth": false,
                     "visualizerType": "linear"
+                },
+                {
+                    "colorizeIcons": false,
+                    "hideMode": "transparent",
+                    "id": "ActiveWindow",
+                    "maxWidth": 250,
+                    "scrollingMode": "always",
+                    "showIcon": true,
+                    "showText": true,
+                    "textColor": "none",
+                    "useFixedWidth": true
                 }
             ],
             "right": [
@@ -437,7 +437,7 @@
     "general": {
         "allowPanelsOnScreenWithoutBar": true,
         "allowPasswordWithFprintd": false,
-        "animationDisabled": true,
+        "animationDisabled": false,
         "animationSpeed": 1,
         "autoStartAuth": false,
         "avatarImage": "/home/kerem/.face",
@@ -562,7 +562,7 @@
     },
     "noctaliaPerformance": {
         "disableDesktopWidgets": true,
-        "disableWallpaper": false
+        "disableWallpaper": true
     },
     "notifications": {
         "backgroundOpacity": 0.8,
