@@ -98,6 +98,12 @@ window-rule {
     geometry-corner-radius 8.000000 8.000000 8.000000 8.000000
     clip-to-geometry true
 }
+
+window-rule {
+    match app-id="feishin$"
+    default-column-width { proportion 0.15; }
+}
+
 animations { slowdown 1.000000; }
 
 debug {
