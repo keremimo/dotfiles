@@ -146,6 +146,11 @@
                     "id": "plugin:screenshot"
                 },
                 {
+                    "defaultSettings": {
+                        "activeColor": "primary",
+                        "refreshInterval": 5000,
+                        "showProfileLabel": false
+                    },
                     "id": "plugin:monique"
                 },
                 {
@@ -276,7 +281,7 @@
     },
     "colorSchemes": {
         "darkMode": true,
-        "generationMethod": "vibrant",
+        "generationMethod": "faithful",
         "manualSunrise": "06:30",
         "manualSunset": "18:30",
         "monitorForColors": "DP-1",
@@ -761,7 +766,7 @@
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",
         "wallhavenPurity": "100",
-        "wallhavenQuery": "chainsa",
+        "wallhavenQuery": "commodore",
         "wallhavenRatios": "",
         "wallhavenResolutionHeight": "",
         "wallhavenResolutionMode": "atleast",

@@ -1,1 +1,10 @@
 Wallpapers/
+
+# Machine-local/app-generated state. These are written by settings UIs and should
+# not make every Stow-managed machine dirty.
+.config/fish/fish_variables
+.config/ghostty/themes/noctalia
+.config/gtk-4.0/noctalia.css
+.config/niri/noctalia.kdl
+.config/noctalia/colors.json
+.config/noctalia/plugins/*/settings.json

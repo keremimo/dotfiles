@@ -1,0 +1,15 @@
+# Repo/package metadata, not dotfiles.
+^/\.git($|/)
+^/\.gitignore$
+^/\.stow-local-ignore$
+^/setup\.sh$
+^/Wallpapers($|/)
+
+# Keep app-generated or machine-local files out of Stow links.
+# They may still exist locally, but each machine owns its own copy/state.
+^/\.config/fish/fish_variables$
+^/\.config/ghostty/themes/noctalia$
+^/\.config/gtk-4\.0/noctalia\.css$
+^/\.config/niri/noctalia\.kdl$
+^/\.config/noctalia/colors\.json$
+^/\.config/noctalia/plugins/[^/]+/settings\.json$
