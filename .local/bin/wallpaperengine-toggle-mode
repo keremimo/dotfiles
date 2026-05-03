@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-if ! qs -c noctalia-shell ipc show >/dev/null 2>&1; then
-  printf '%s\n' "Noctalia is not running" >&2
-  exit 1
-fi
-
-qs -c noctalia-shell ipc call plugin:linux-wallpaperengine-controller toggleWallpaperMode

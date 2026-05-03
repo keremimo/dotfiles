@@ -86,39 +86,6 @@
                     "id": "Clock",
                     "tooltipFormat": "HH:mm ddd, MMM dd",
                     "useCustomFont": false
-                },
-                {
-                    "defaultSettings": {
-                        "applyWallpaperColorsOnApply": false,
-                        "assetsDir": "",
-                        "autoApplyOnStartup": true,
-                        "defaultAudioReactiveEffects": true,
-                        "defaultClamp": "clamp",
-                        "defaultDisableMouse": false,
-                        "defaultDisableParallax": false,
-                        "defaultFps": 30,
-                        "defaultFullscreenPauseOnlyActive": false,
-                        "defaultMuted": true,
-                        "defaultNoAutomute": false,
-                        "defaultNoFullscreenPause": false,
-                        "defaultScaling": "fill",
-                        "defaultVolume": 100,
-                        "enableExtraPropertiesEditor": true,
-                        "iconColor": "none",
-                        "lastKnownGoodScreens": {
-                        },
-                        "panelLastSelectedPath": "",
-                        "runtimeRecoveryPending": false,
-                        "screens": {
-                        },
-                        "wallpaperColorScreenshots": {
-                        },
-                        "wallpaperProperties": {
-                        },
-                        "wallpaperScanCacheMinutes": 5,
-                        "wallpapersFolder": "~/.local/share/Steam/steamapps/workshop/content/431960"
-                    },
-                    "id": "plugin:linux-wallpaperengine-controller"
                 }
             ],
             "left": [
