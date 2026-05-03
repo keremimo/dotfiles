@@ -1,0 +1,93 @@
+{
+  "wallpapersFolder": "~/.local/share/Steam/steamapps/workshop/content/431960",
+  "assetsDir": "",
+  "iconColor": "none",
+  "enableExtraPropertiesEditor": true,
+  "defaultScaling": "fill",
+  "defaultClamp": "border",
+  "defaultFps": 60,
+  "defaultVolume": 100,
+  "defaultMuted": true,
+  "defaultAudioReactiveEffects": false,
+  "defaultNoAutomute": false,
+  "defaultDisableMouse": true,
+  "defaultDisableParallax": true,
+  "applyWallpaperColorsOnApply": true,
+  "wallpaperColorScreenshots": {
+    "eDP-1": {
+      "path": "/home/kerem/.cache/noctalia/plugins/linux-wallpaperengine-controller/eDP-1-2147092453-theme-shot.png",
+      "wallpaperPath": "/home/kerem/.local/share/Steam/steamapps/workshop/content/431960/2147092453",
+      "scaling": "fill",
+      "updatedAt": 1777729153301
+    }
+  },
+  "defaultNoFullscreenPause": false,
+  "defaultFullscreenPauseOnlyActive": true,
+  "autoApplyOnStartup": true,
+  "wallpaperScanCacheMinutes": 5,
+  "panelLastSelectedPath": "",
+  "screens": {
+    "eDP-1": {
+      "path": "/home/kerem/.local/share/Steam/steamapps/workshop/content/431960/2147092453",
+      "scaling": "fill"
+    }
+  },
+  "wallpaperProperties": {
+    "1132505365": {
+      "schemecolor": "0,0,0"
+    },
+    "1250971693": {
+      "schemecolor": "0,0,0"
+    },
+    "2147092453": {
+      "audio_responsive_clouds": "1",
+      "schemecolor": "0,0,0",
+      "static_flashing_clouds_better_to_disable_audio_reactive_": "0"
+    },
+    "2628380382": {
+      "schemecolor": "71,54,134"
+    },
+    "3441873795": {
+      "blippers": "1",
+      "cloudshadows": "1",
+      "cursorripple": "1",
+      "datetime": "1",
+      "datetime24hrformat": "0",
+      "datetimecolor": "1,1,1",
+      "datetimeisdraggable": "1",
+      "datetimescale": "1",
+      "dustmotes": "0",
+      "fish": "1",
+      "kirbyblinking": "1",
+      "lightshaft": "0",
+      "mediaintegration": "0",
+      "mediaintegrationisdraggable": "1",
+      "mediaintegrationopacity": "0.5",
+      "mediaintegrationscale": "0.5",
+      "music": "2",
+      "musicnote": "0",
+      "musicvolume": "0.6",
+      "schemecolor": "57,137,151",
+      "waterambiencevolume": "0.4",
+      "watercaustics": "1",
+      "watercausticsgranularity": "1.5"
+    },
+    "3471004940": {
+      "clock": "0",
+      "darkersky": "1",
+      "schemecolor": "17,51,162",
+      "startrail": "2",
+      "visualizer": "0",
+      "wind": "1"
+    },
+    "3597772384": {}
+  },
+  "lastKnownGoodScreens": {
+    "eDP-1": {
+      "path": "/home/kerem/.local/share/Steam/steamapps/workshop/content/431960/2147092453",
+      "scaling": "fill"
+    }
+  },
+  "runtimeRecoveryPending": false,
+  "defaultDisableParticles": false
+}
