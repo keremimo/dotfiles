@@ -60,8 +60,10 @@ binds {
     Super+2 { focus-workspace 2; }
     Super+3 { focus-workspace 3; }
     Super+4 { focus-workspace 4; }
+    Super+A { focus-column-left; }
     Super+B { spawn "firefox"; }
     Super+C { center-column; }
+    Super+D { focus-column-right; }
     Super+E { expel-window-from-column; }
     Super+Equal { set-column-width "+5%"; }
     Super+H { focus-column-left; }
@@ -102,6 +104,17 @@ window-rule {
 window-rule {
     match app-id="feishin$"
     default-column-width { proportion 0.15; }
+}
+
+window-rule {
+    match app-id="^zoom$"
+    open-floating true
+}
+
+window-rule {
+    match app-id="^zoom$" title="^annotate_toolbar$"
+    open-floating true
+    open-focused false
 }
 
 animations { slowdown 1.000000; }
