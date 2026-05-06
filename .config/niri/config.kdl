@@ -88,8 +88,8 @@ binds {
     Super+q { close-window; }
     XF86AudioLowerVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1-"; }
     XF86AudioRaiseVolume { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
-    XF86MonBrightnessDown { spawn "brightnessctl" "set" "5%-"; }
-    XF86MonBrightnessUp { spawn "brightnessctl" "set" "+5%"; }
+    XF86MonBrightnessDown { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "decrease"; }
+    XF86MonBrightnessUp { spawn "qs" "-c" "noctalia-shell" "ipc" "call" "brightness" "increase"; }
 }
 spawn-at-startup "qs" "-c" "noctalia-shell"
 spawn-at-startup "vicinae" "server"
