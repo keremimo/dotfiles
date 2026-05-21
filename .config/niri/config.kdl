@@ -14,6 +14,7 @@ input {
         accel-speed 0.000000
         accel-profile "flat"
         scroll-factor 0.300000
+        dwt
     }
     mouse {
         accel-speed 0.000000
