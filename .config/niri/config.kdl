@@ -52,7 +52,17 @@ cursor {
 hotkey-overlay {
     skip-at-startup
 }
-environment
+environment {
+    __EGL_VENDOR_LIBRARY_FILENAMES "/usr/share/glvnd/egl_vendor.d/50_mesa.json"
+    __GLX_VENDOR_LIBRARY_NAME "mesa"
+    VK_DRIVER_FILES "/usr/share/vulkan/icd.d/intel_icd.json"
+    VK_ICD_FILENAMES "/usr/share/vulkan/icd.d/intel_icd.json"
+    MESA_VK_DEVICE_SELECT "8086:a788"
+    DRI_PRIME "0"
+    __NV_PRIME_RENDER_OFFLOAD "0"
+    WGPU_BACKEND "vulkan"
+    WGPU_POWER_PREF "low"
+}
 binds {
     Print { spawn "sh" "-c" "grim -g \"$(slurp)\" - | magick png:- -colorspace Gray -depth 8 -resample 400x400 tif:- | tesseract --oem 2 --psm 6 -l eng - - | wl-copy"; }
     Super+Shift+4 { spawn "sh" "-c" "grim -g \"$(slurp)\" - | wl-copy"; }
@@ -76,13 +86,14 @@ binds {
     Super+Right { focus-column-or-monitor-right; }
     Super+Up { focus-workspace-up; }
     Super+Shift+Down { move-window-to-workspace-down; }
+    Super+Shift+F { maximize-column; }
     Super+Shift+Left { move-column-left; }
     Super+Shift+Right { move-column-right; }
     Super+Shift+Up { move-window-to-workspace-up; }
     Super+Shift+q { quit skip-confirmation=true; }
     Super+S { toggle-window-floating; }
     Super+Space repeat=false { spawn "vicinae" "toggle"; }
-    Super+T { spawn "ghostty"; }
+    Super+T { spawn "kitty"; }
     Super+W { consume-window-into-column; }
     Super+f { fullscreen-window; }
     Super+q { close-window; }
@@ -103,7 +114,7 @@ window-rule {
 
 window-rule {
     match app-id="feishin$"
-    default-column-width { proportion 0.15; }
+    default-column-width { proportion 0.25; }
 }
 
 window-rule {
@@ -120,11 +131,21 @@ window-rule {
 animations { slowdown 1.000000; }
 
 debug {
-	honor-xdg-activation-with-invalid-serial
+    honor-xdg-activation-with-invalid-serial
+    render-drm-device "/dev/dri/by-path/pci-0000:00:02.0-render"
+    ignore-drm-device "/dev/dri/by-path/pci-0000:01:00.0-render"
 }
 
 window-rule {
-    match app-id="ghostty$"
+    match app-id="kitty$"
+    background-effect {
+        blur true
+    }
+}
+
+window-rule {
+    match app-id="^dev\\.zed\\.Zed$"
+    match app-id="^app\\.liten\\.Gram$"
     background-effect {
         blur true
     }

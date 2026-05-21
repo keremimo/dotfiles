@@ -9,7 +9,7 @@ window_padding_height 0
 window_margin_width 0
 window_margin_height 0
 include theme.conf
-background_opacity 0.60
+background_opacity 0.90
 hide_window_decorations yes
 confirm_os_window_close 0
 map ctrl+c  copy_to_clipboard
@@ -27,8 +27,3 @@ input_delay 1
 sync_to_monitor no
 
 shell fish
-
-# BEGIN_KITTY_THEME
-# Noctalia
-include current-theme.conf
-# END_KITTY_THEME
